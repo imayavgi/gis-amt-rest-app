@@ -1,5 +1,5 @@
 package uiak.exper.gisamt.model;
 
-public enum InvRegion {
+public enum InvestmentFunctionRegion {
 	US, AU, UK, GLOBAL
 }

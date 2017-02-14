@@ -57,7 +57,7 @@ public class BusinessSolution implements Serializable {
 	private boolean globalSoln;
 
 	@Column(nullable = false)
-	private InvRegion forRegion;
+	private InvestmentFunctionRegion forRegion;
 	
 	@Column(nullable = true)
 	private DeskType forDesk;
@@ -73,7 +73,7 @@ public class BusinessSolution implements Serializable {
 	protected BusinessSolution() {
 	}
 
-	public BusinessSolution(String solnName, SolutionType solnType, InvAssetType assetClass, ProductType productType, boolean global, InvRegion forRegion,
+	public BusinessSolution(String solnName, SolutionType solnType, InvAssetType assetClass, ProductType productType, boolean global, InvestmentFunctionRegion forRegion,
 			BusinessFunction businessFunction) {
 		super();
 		this.solnName = solnName;
@@ -125,11 +125,11 @@ public class BusinessSolution implements Serializable {
 		this.globalSoln = global;
 	}
 
-	public InvRegion getForRegion() {
+	public InvestmentFunctionRegion getForRegion() {
 		return forRegion;
 	}
 
-	public void setForRegion(InvRegion forRegion) {
+	public void setForRegion(InvestmentFunctionRegion forRegion) {
 		this.forRegion = forRegion;
 	}
 

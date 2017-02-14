@@ -28,7 +28,7 @@ import uiak.exper.gisamt.model.BusinessFunction;
 import uiak.exper.gisamt.model.BusinessSolution;
 import uiak.exper.gisamt.model.ComponentRunsOn;
 import uiak.exper.gisamt.model.InvAssetType;
-import uiak.exper.gisamt.model.InvRegion;
+import uiak.exper.gisamt.model.InvestmentFunctionRegion;
 import uiak.exper.gisamt.model.ProductType;
 import uiak.exper.gisamt.model.SolutionComponent;
 import uiak.exper.gisamt.model.SolutionType;
@@ -61,7 +61,7 @@ public class GisAmApplication {
 
 			{
 				BusinessSolution l2131pm_sol_1 = new BusinessSolution("L1-1-L2-1-L3-1-Solution", SolutionType.ASP,
-						InvAssetType.EQ, ProductType.ALL, true, InvRegion.US, l2131pm);
+						InvAssetType.EQ, ProductType.ALL, true, InvestmentFunctionRegion.US, l2131pm);
 				
 				SolutionComponent l2131pm_sol_1_comp1 = new SolutionComponent(AppComponentType.UI_SERVER, "SOME_PORTAL",
 						ComponentRunsOn.LINUX_DC, l2131pm_sol_1);
@@ -73,7 +73,7 @@ public class GisAmApplication {
 
 			}
 			BusinessSolution l2131pm_sol_2 = new BusinessSolution("L1-1-L2-1-L3-1-Solution-2", SolutionType.ASP,
-					InvAssetType.FI_TAXABLE, ProductType.ALL, false, InvRegion.US, l2131pm);
+					InvAssetType.FI_TAXABLE, ProductType.ALL, false, InvestmentFunctionRegion.US, l2131pm);
 			bsolRepo.save(l2131pm_sol_2);
 
 			BusinessFunction l213141pm = new BusinessFunction("Sample L1-1-L2-1-L3-1-L4-1 Function", "L4");
