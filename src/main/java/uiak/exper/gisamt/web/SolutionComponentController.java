@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package uiak.exper.gisamt.jpa.web;
+package uiak.exper.gisamt.web;
 
 import java.util.List;
 

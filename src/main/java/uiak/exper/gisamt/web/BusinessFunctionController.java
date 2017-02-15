@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package uiak.exper.gisamt.jpa.web;
+package uiak.exper.gisamt.web;
 
 import java.util.List;
 
@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import uiak.exper.gisamt.model.BusinessFunction;
 import uiak.exper.gisamt.service.BusinessFunctionService;
 
@@ -44,6 +45,16 @@ public class BusinessFunctionController {
 	public BusinessFunction getBusinessFunction(@PathVariable("id") long id) {
 		return this.businessFunctionService.findById(id);
 	}
-	
+
+	@GetMapping("/bfunc/{id}/subbfunc")
+	public BusinessFunction getSubBusinessFunction(@PathVariable("id") long id) {
+		throw new NotImplementedException();
+	}
+
+	@GetMapping("/bfunc/{id}/bussoln")
+	public BusinessFunction getBusinessSolutions(@PathVariable("id") long id) {
+		throw new NotImplementedException();
+	}
+
 
 }
