@@ -16,8 +16,10 @@ tmp/**/*
 *.swp
 *~.nib
 local.properties
+*.iml
 .classpath
 .settings/
+.idea/
 .loadpath
 
 # External tool builders
