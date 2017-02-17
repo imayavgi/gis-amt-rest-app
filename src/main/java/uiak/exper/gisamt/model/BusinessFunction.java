@@ -87,6 +87,10 @@ public class BusinessFunction implements Serializable {
 		return this.subBusinessFunctions;
 	}
 	
+	public Set<BusinessSolution> getBusinessSolutions() {
+		return businessSolutions;
+	}
+	
 	@Override
 	public String toString() {
 		return getName() + "," + getLevel();

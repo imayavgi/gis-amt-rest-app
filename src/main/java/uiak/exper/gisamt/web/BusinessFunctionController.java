@@ -17,6 +17,7 @@
 package uiak.exper.gisamt.web;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import uiak.exper.gisamt.model.BusinessFunction;
+import uiak.exper.gisamt.model.BusinessSolution;
 import uiak.exper.gisamt.service.BusinessFunctionService;
 
 @RestController
@@ -47,13 +49,15 @@ public class BusinessFunctionController {
 	}
 
 	@GetMapping("/bfunc/{id}/subbfunc")
-	public BusinessFunction getSubBusinessFunction(@PathVariable("id") long id) {
-		throw new NotImplementedException();
+	public Set<BusinessFunction> getSubBusinessFunction(@PathVariable("id") long id) {
+		BusinessFunction bf = this.businessFunctionService.findById(id);
+		return bf.getSubBusinessFunctions();
 	}
 
 	@GetMapping("/bfunc/{id}/bussoln")
-	public BusinessFunction getBusinessSolutions(@PathVariable("id") long id) {
-		throw new NotImplementedException();
+	public Set<BusinessSolution> getBusinessSolutions(@PathVariable("id") long id) {
+		BusinessFunction bf = this.businessFunctionService.findById(id);
+		return bf.getBusinessSolutions();
 	}
 
 

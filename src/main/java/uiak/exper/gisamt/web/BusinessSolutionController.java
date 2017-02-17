@@ -17,6 +17,7 @@
 package uiak.exper.gisamt.web;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +25,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import uiak.exper.gisamt.model.BusinessFunction;
 import uiak.exper.gisamt.model.BusinessSolution;
+import uiak.exper.gisamt.model.SolutionComponent;
 import uiak.exper.gisamt.service.BusinessSolutionService;
 
 @RestController
@@ -45,5 +48,14 @@ public class BusinessSolutionController {
 		return this.businessSolutionService.findById(id);
 	}
 	
+	@GetMapping("/bsol/{id}/bfunc")
+	public BusinessFunction getBusinessFunction(@PathVariable("id") long id) {
+		return this.businessSolutionService.findById(id).getBusinessFunction();
+	}
+
+	@GetMapping("/bsol/{id}/solcomps")
+	public Set<SolutionComponent> getSolutionComponents(@PathVariable("id") long id) {
+		return this.businessSolutionService.findById(id).getComposedOf();
+	}
 
 }
