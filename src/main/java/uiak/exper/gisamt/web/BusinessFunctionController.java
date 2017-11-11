@@ -25,7 +25,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import uiak.exper.gisamt.model.BusinessFunction;
 import uiak.exper.gisamt.model.BusinessSolution;
 import uiak.exper.gisamt.service.BusinessFunctionService;

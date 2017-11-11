@@ -18,6 +18,7 @@ package uiak.exper.gisamt;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
@@ -37,15 +38,15 @@ import uiak.exper.gisamt.service.BusinessSolutionRepository;
 import uiak.exper.gisamt.service.SolutionComponentRepository;
 
 @SpringBootApplication
-@EntityScan("uiak.exper.gisamt.model")
-@EnableJpaRepositories("uiak.exper.gisamt.service")
+//@EntityScan("uiak.exper.gisamt.model")
+//@EnableJpaRepositories("uiak.exper.gisamt.service")
 public class GisAmApplication {
 
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(GisAmApplication.class, args);
 	}
 
-	@Bean
+	//@Bean
 	public CommandLineRunner prePopulate(BusinessFunctionRepository bfuncRepo, BusinessSolutionRepository bsolRepo, SolutionComponentRepository compRepo) {
 		return (args) -> {
 			BusinessFunction l1pm = new BusinessFunction("Sample L1-1 Function", "L1");
