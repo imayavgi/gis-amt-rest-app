@@ -42,7 +42,7 @@ public class SolutionComponentController {
 	
 	@GetMapping("/solcomp/{id}")
 	public SolutionComponent getSolutionComponentById(@PathVariable("id") long id) {
-		return this.solutionCompSvc.findById(id);
+		return this.solutionCompSvc.findById(id).get();
 	}
 	
 

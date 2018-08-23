@@ -45,17 +45,17 @@ public class BusinessSolutionController {
 	
 	@GetMapping("/bsol/{id}")
 	public BusinessSolution getBusinessSolutionById(@PathVariable("id") long id) {
-		return this.businessSolutionService.findById(id);
+		return this.businessSolutionService.findById(id).get();
 	}
 	
 	@GetMapping("/bsol/{id}/bfunc")
 	public BusinessFunction getBusinessFunction(@PathVariable("id") long id) {
-		return this.businessSolutionService.findById(id).getBusinessFunction();
+		return this.businessSolutionService.findById(id).get().getBusinessFunction();
 	}
 
 	@GetMapping("/bsol/{id}/solcomps")
 	public Set<SolutionComponent> getSolutionComponents(@PathVariable("id") long id) {
-		return this.businessSolutionService.findById(id).getComposedOf();
+		return this.businessSolutionService.findById(id).get().getComposedOf();
 	}
 
 }

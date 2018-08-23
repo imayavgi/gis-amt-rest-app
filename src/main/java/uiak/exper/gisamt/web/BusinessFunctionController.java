@@ -44,18 +44,18 @@ public class BusinessFunctionController {
 	
 	@GetMapping("/bfunc/{id}")
 	public BusinessFunction getBusinessFunction(@PathVariable("id") long id) {
-		return this.businessFunctionService.findById(id);
+		return this.businessFunctionService.findById(id).get();
 	}
 
 	@GetMapping("/bfunc/{id}/subbfunc")
 	public Set<BusinessFunction> getSubBusinessFunction(@PathVariable("id") long id) {
-		BusinessFunction bf = this.businessFunctionService.findById(id);
+		BusinessFunction bf = this.businessFunctionService.findById(id).get();
 		return bf.getSubBusinessFunctions();
 	}
 
 	@GetMapping("/bfunc/{id}/bussoln")
 	public Set<BusinessSolution> getBusinessSolutions(@PathVariable("id") long id) {
-		BusinessFunction bf = this.businessFunctionService.findById(id);
+		BusinessFunction bf = this.businessFunctionService.findById(id).get();
 		return bf.getBusinessSolutions();
 	}
 

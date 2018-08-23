@@ -17,6 +17,7 @@
 package uiak.exper.gisamt.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -41,8 +42,8 @@ class BusinessSolutionServiceImpl implements BusinessSolutionService {
 
 
 	@Override
-	public BusinessSolution findById(Long id) {
-		return businessSolutionRepository.findOne(id);
+	public Optional<BusinessSolution> findById(Long id) {
+		return businessSolutionRepository.findById(id);
 	}
 
 

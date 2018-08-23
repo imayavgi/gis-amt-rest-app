@@ -17,6 +17,7 @@
 package uiak.exper.gisamt.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -29,7 +30,7 @@ public interface BusinessFunctionService {
 	
 	List<BusinessFunction> findAll();
 
-	BusinessFunction findById(Long id);
+	Optional<BusinessFunction> findById(Long id);
 
 
 }

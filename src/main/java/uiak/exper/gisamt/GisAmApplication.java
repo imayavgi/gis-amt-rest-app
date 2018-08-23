@@ -37,6 +37,8 @@ import uiak.exper.gisamt.service.BusinessFunctionRepository;
 import uiak.exper.gisamt.service.BusinessSolutionRepository;
 import uiak.exper.gisamt.service.SolutionComponentRepository;
 
+import java.util.Optional;
+
 @SpringBootApplication
 //@EntityScan("uiak.exper.gisamt.model")
 //@EnableJpaRepositories("uiak.exper.gisamt.service")
@@ -88,8 +90,8 @@ public class GisAmApplication {
 			l1221pm.setParentBusinessFunction(l12pm);
 			bfuncRepo.save(l1221pm);
 
-			BusinessFunction readback2 = bfuncRepo.findOne(1L);
-			System.out.println(readback2.getSubBusinessFunctions().size());
+			Optional<BusinessFunction> readback2 = bfuncRepo.findById(1L);
+			System.out.println(readback2.get().getSubBusinessFunctions().size());
 
 		};
 	}

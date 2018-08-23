@@ -17,6 +17,7 @@
 package uiak.exper.gisamt.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -67,8 +68,8 @@ class BusinessFunctionServiceImpl implements BusinessFunctionService {
 
 
 	@Override
-	public BusinessFunction findById(Long id) {
-		return businessFunctionRepository.findOne(id);
+	public Optional<BusinessFunction> findById(Long id) {
+		return businessFunctionRepository.findById(id);
 	}
 
 

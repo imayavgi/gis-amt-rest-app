@@ -17,6 +17,7 @@
 package uiak.exper.gisamt.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import uiak.exper.gisamt.model.SolutionComponent;
 
@@ -24,7 +25,7 @@ public interface SolutionComponentService {
 
 	List<SolutionComponent> findAll();
 
-	SolutionComponent findById(Long id);
+	Optional<SolutionComponent> findById(Long id);
 
 
 }

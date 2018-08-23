@@ -17,9 +17,7 @@
 package uiak.exper.gisamt.service;
 
 import java.util.List;
-
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import java.util.Optional;
 
 import uiak.exper.gisamt.model.BusinessSolution;
 
@@ -27,7 +25,7 @@ public interface BusinessSolutionService {
 
 	List<BusinessSolution> findAll();
 
-	BusinessSolution findById(Long id);
+	Optional<BusinessSolution> findById(Long id);
 
 
 }

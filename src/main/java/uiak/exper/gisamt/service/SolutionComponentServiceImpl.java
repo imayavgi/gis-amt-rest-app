@@ -17,6 +17,7 @@
 package uiak.exper.gisamt.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -41,8 +42,8 @@ class SolutionComponentServiceImpl implements SolutionComponentService {
 
 
 	@Override
-	public SolutionComponent findById(Long id) {
-		return solutionComponentRepo.findOne(id);
+	public Optional<SolutionComponent> findById(Long id) {
+		return solutionComponentRepo.findById(id);
 	}
 
 
